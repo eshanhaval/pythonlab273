@@ -103,7 +103,7 @@ def get_shoe():
  cursor.execute(add_salary, data_salary)
  cnx.commit()
  cursor.close()
- cnx.close()
+
  
 @route('/shoes',method="PUT")
 def get_shoe():
@@ -116,7 +116,7 @@ def get_shoe():
  cursor.execute(add_salary, data_salary)
  cnx.commit()
  cursor.close()
- cnx.close()
+
 
 @route('/shoes/:id',method="PUT")
 def get_shoe():
@@ -129,7 +129,7 @@ def get_shoe():
  cursor.execute(add_salary, data_salary)
  cnx.commit()
  cursor.close()
- cnx.close()
+
 
 
 
@@ -144,7 +144,7 @@ def get_shoe():
  cursor.execute(add_salary, data_salary)
  cnx.commit()
  cursor.close()
- cnx.close()
+
 
 
 @route('/shoes/:id',method="DELETE")
