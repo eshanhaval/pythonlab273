@@ -11,7 +11,7 @@ import collections
 connection = Connection('localhost', 27017)
 db = connection.admin
 
-cnx = mysql.connector.connect(user='root',database='cmpe273')
+cnx = mysql.connector.connect(user='root',database='cmpe273',passwd='root')
 
 rowarray_list = []
  
