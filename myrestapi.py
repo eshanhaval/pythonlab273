@@ -88,7 +88,8 @@ def get_shoe(id):
 		data['shoeName'] = row[1]
 		data['shoeQuantity'] = row[2]
 		data['createdBy'] = row[3]
-		data['date'] = str(row[4])				
+		data['date'] = str(row[4])
+		data['date']=data['date'][2:]				
 	json_string = json.dumps(data)
 	return json_string
 
