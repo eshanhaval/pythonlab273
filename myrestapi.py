@@ -7,6 +7,8 @@ import datetime
 import time
 import mysql.connector
 import collections
+import datetime
+
 
 connection = Connection('localhost', 27017)
 db = connection.admin
@@ -98,10 +100,10 @@ def get_shoe():
  data = request.body.read()
  entity = json.loads(data)
  cursor = cnx.cursor()	
- now = time.strftime("%x")
+ now = datetime.datetime.now()
  add_salary = (
 		 "INSERT INTO product (shoeId, shoeName, shoeQuantity, createdBy, date) VALUES (%(shoieId)s, %(shoeName)s, %(shoeQuantity)s, %(createdBy)s, %(date)s)")
- data_salary = {'shoieId': entity["shoeId"],'shoeName': entity["shoeName"],'shoeQuantity': entity["shoeQuantity"],'createdBy': entity["createdBy"],'date':now}
+ data_salary = {'shoieId': entity["shoeId"],'shoeName': entity["shoeName"],'shoeQuantity': entity["shoeQuantity"],'createdBy': entity["createdBy"],'date':now.isoformat()}
  cursor.execute(add_salary, data_salary)
  cnx.commit()
  cursor.close()
